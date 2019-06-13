@@ -1,5 +1,8 @@
 package labTerminalB;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Driver {
 	/*
 	 * TODO 1	10 Marks
@@ -9,10 +12,17 @@ public class Driver {
 	 * after completing each TODO task commit and push to remote repository with commit message
 	 * 		"TODO 'TASK NUMBER' Complete" e.g. in this case "TODO 1 COMPLETED"
 	 */
+
+
+    
+    
+    private static final String INPUT ="FA16-BSE-069-ATK";
+        
 	public static void main(String[] args) {
 		String input = "The <b>Good</b>, the <i>Bad</i>, and the <strong>Ugly</strong>";
 		String regex = "TODO 1";
-		String output = input.replaceAll(regex, "");
+		String output = input.replaceAll("\\<.*?\\>", "");
+		
 		System.out.println(output);
 		
 		
@@ -29,6 +39,10 @@ public class Driver {
 		me2.addRental(r3);
 		System.out.println(me.statement());
 		System.out.println(me2.statement());
+		
+		 Pattern p = Pattern.compile(regex);
+	        Matcher m = p.matcher(INPUT);
+	        System.out.println(m.find());
 
 	}
 }
