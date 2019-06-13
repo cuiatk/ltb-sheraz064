@@ -83,7 +83,7 @@ public class Customer {
 				thisAmount += 1.5;
 				if (each.getDaysRented() > 3)
 					thisAmount += (each.getDaysRented() - 3) * 1.5;
-				break;
+				break; 
 			}
 			return thisAmount;
 		}
