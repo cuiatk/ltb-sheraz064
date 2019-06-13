@@ -13,6 +13,7 @@ public class CustomerTest {
 	Rental r1 = new Rental(m1, 23);
 	Rental r2 = new Rental(m2,4);
 	
+	
 	/**
 	 * Test 1 Customer rented two movies one REGULAR and one NEW_RELEASE
 	 */
@@ -34,6 +35,27 @@ public class CustomerTest {
 		String name=me.getName();
 		assert name.equals("nadir");
 	}
+	public void test1() {
+
+		Movie m1 = new Movie("Dil", 0);
+		Movie m2 = new Movie("jan", 1);
+		Customer me = new Customer("Shari");
+		Customer me2 = new Customer("malik");
+		Rental r1 = new Rental(m1, 20);
+		Rental r2 = new Rental(m2,20);
+		me.addRental(r1);
+		me.addRental(r2);
+		//fail("Not yet implemented");
+		String output1 = "Rental Record for shari\r\n" + 
+				"	dil	29.0\r\n" + 
+				"	jan	60.0";
+		if(output1.equals(me.statement()))
+		{
+			assert true;
+		}
+	}
+	
+	
 	
 	/*
 	 * TODO 2			10 Marks
