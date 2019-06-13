@@ -1,6 +1,9 @@
 package labTerminalB;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
+
 
 public class CustomerTest {
 	Movie m1 = new Movie("Spancer", 0);
@@ -26,6 +29,12 @@ public class CustomerTest {
 			assert true;
 		}
 	}
+	public void test() {
+		 Customer calc=new Customer(null);
+		String name=me.getName();
+		assert name.equals("nadir");
+	}
+	
 	/*
 	 * TODO 2			10 Marks
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
