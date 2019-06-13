@@ -30,6 +30,15 @@ public class Customer {
 		 * TODO 3		10 Marks
 		 * Provide suitable specification for statement method 
 		 */
+	/**
+	 * Genrate overall bill of Rental
+	 * @param nothing
+	 * @return String
+	 * Calculate Total Rental bill
+	*Calculate Frequnt Rental points
+	*
+	 */
+		
 		public String statement() {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
